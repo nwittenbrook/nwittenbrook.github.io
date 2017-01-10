@@ -1,0 +1,142 @@
+/*
+Natalie Wittenbrook, Thursday 4 11 12
+This is my style sheet file for my index page.
+*/
+
+#header {
+	position: absolute;
+	top: 0px;
+	left: 330px;
+}
+
+#flower {
+	position: absolute;
+	top: -10px;
+	left: -50px;
+	max-width: 600px;
+}
+
+h1 {
+	vertical-align: bottom;
+	text-align: left;
+	color: white;
+	font-size: 46pt;
+	margin-top: 7px;
+}
+
+h1 a:link {
+	color: white;
+	font-size: 24pt;
+	text-decoration: none;
+	font-family: "MS Sans Serif", Geneva, sans-serif;
+}
+
+h1 a:visited {
+	color: white;
+}
+
+.firstletter {
+	font-size: 48pt;
+	color: #7CC0B0;
+	background-color: white;
+	padding: 0px 10px;
+	margin: 0px 10px;
+}
+
+#topbar {
+	margin-left: 25px;
+	margin-top: 5px;
+}
+
+
+#topbar {
+	list-style-type: none;
+}
+
+#topbar li {
+	padding-bottom: 30px;
+	padding-right: 5px;
+	color: black;
+	float: left;
+	list-style-type: none;
+}
+
+#topbar a:link {
+	color: white;
+	font-family: "Palatino Linotype", Palatino, serif;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#topbar a:visited {
+	color: white;
+}
+
+#topbar a:hover {
+	color: #D0D0D0;
+	text-decoration: underline;
+}
+
+h2 {
+	color: #383838;	
+}
+
+body {
+	color: #404040;
+	font-size: 12pt;
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #7CC0B0;
+}
+
+#mainbody {
+	outline: 3px dotted #D0D0D0;
+	padding: 50px 100px;
+	background-color: white;
+	margin: 200px 200px;
+	text-align: left;
+	max-width: 50%;
+}
+
+#mainbody a:link {
+	color: #7CC0B0;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#mainbody a:visited {
+	color: #7CC0B0;
+}
+
+#mainbody a:hover {
+	color: #D0D0D0;
+	text-decoration: underline;
+}
+
+#contact {
+	font-style: italic;
+	font-family: Georgia, serif;
+	color: gray;
+	text-align: center;
+}
+
+#newsitem {
+	list-style-type: circle;
+	margin-left: 20px;
+} 
+
+h3 {
+	font-size: 12pt;
+	padding-bottom: 0px;
+	color: #44A08A;
+	font-weight: bold;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#footer {
+	font-size: 10pt;
+	text-align: center;
+	color: #D0D0D0;
+	margin-top: 20px;
+}
+	
+
