@@ -9,13 +9,15 @@ var SCORE = 0;
 var BEST = 0;
 var PREVSTATE = null;
 var CURRSCORE = 0;
-var HIGH = 1400;
+var HIGH = 0;
+var BEATN = false;
+var BEATG = false; 
 
 window.onload = function() {
 	if ($("best")) {
 		BEST = $("best").innerHTML;
 	}
-	HIGH = $("high").innerHTML;
+	HIGH = $("highn").innerHTML;
 	createBoulders();
 	$("treasure").addClassName("treasureFade");
 	$("chestclick").hide();
@@ -138,9 +140,16 @@ function boulderDel(thisBoulder) {
 			curr.removeClassName(getGroup(curr));
 		}
 		markColors();
-		if (SCORE > HIGH) {
-			alert("Congrats! You beat Natalie's high score! You get a 200 point bonus! :D");
+		$("score").innerHTML = (SCORE);
+		if (SCORE > HIGH && BEATN == false) {
+			alert("Congrats! You beat Natalie's high score. You get a 200 point bonus!");
+			BEATN = true;
 			SCORE += 200;
+			HIGH = $("highg").innerHTML;
+		} else if (SCORE > HIGH && BEATG == false && BEATN == true) {
+			alert("Whoa! You beat the guest high score. You get a 2000 point bonus!");
+			BEATG = true;
+			SCORE += 2000;
 		}
 		$("score").innerHTML = (SCORE);
 		var groups = $$('.hasGroup');
@@ -157,7 +166,13 @@ function boulderDel(thisBoulder) {
 				}
 				newRound();
 			} else {
-				alert("You lost. :( Press Restart to start a new game.");
+				if (BEATN == true && BEATG == false) {
+					alert("You lost, but you still beat my high score! Nice job! Press Restart to start a new game.")
+				} else if (BEATG == true) {
+					alert("You lost, but you set a new guest high score! Let me know that you're the new grand champion with your score of " + SCORE + "!")
+				} else {
+					alert("You lost. :( Press Restart to start a new game.");
+				}
 				if (BEST < SCORE) {
 					BEST = SCORE;
 				}
@@ -246,9 +261,6 @@ function toId(xPos, yPos) {
 
 // starts the game over	with a new set of boulders
 function restart(event) {
-	if (BEST < SCORE) {
-		BEST = SCORE;
-	}
 	SCORE = 0;
 	newRound();
 }
@@ -257,17 +269,6 @@ function restart(event) {
 function newRound() {
 	var boulders = $$('.boulder');
 	boulders.invoke('remove');
-	HIGH = $("high").innerHTML;
-	if (BEST < SCORE) {
-		BEST = SCORE;
-	}
-	new Ajax.Request("webservice.php", {
-			method: "post",
-			parameters: {"best": BEST},
-			onFailure: ajaxFailure,
-			onException: ajaxFailure		
-	});
-	$("best").innerHTML = (BEST);
 	createBoulders();
 }
 

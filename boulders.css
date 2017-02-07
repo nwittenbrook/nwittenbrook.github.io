@@ -5,8 +5,18 @@ This is my style sheet file for boulders.html
 
 body {
 	font-family: monospace;
-	font-size: 12pt;
+	font-size: 16px;
 	text-align: center;
+	margin: 0 auto;
+}
+
+.intro {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.level {
+	margin-top: 2em;
 }
 
 #boulderarea {
@@ -23,6 +33,10 @@ body {
 	height: 30px;
 	position: absolute;
 	background: rgba(0, 0, 0, 0);
+}
+
+.boulder:hover {
+	cursor: pointer;
 }
 
 .faded {
@@ -53,6 +67,10 @@ table {
 
 .treasureFade {
 	opacity: 0.75;
+}
+
+#restart {
+	margin-right: 30px;
 }
 
 	
