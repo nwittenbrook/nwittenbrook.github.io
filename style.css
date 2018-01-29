@@ -1,142 +1,73 @@
 /*
-Natalie Wittenbrook, Thursday 4 11 12
-This is my style sheet file for my index page.
+Index page style sheet file
 */
-
-#header {
-	position: absolute;
-	top: 0px;
-	left: 330px;
+html {
+  box-sizing: border-box;
 }
-
-#flower {
-	position: absolute;
-	top: -10px;
-	left: -50px;
-	max-width: 600px;
-}
-
-h1 {
-	vertical-align: bottom;
-	text-align: left;
-	color: white;
-	font-size: 46pt;
-	margin-top: 7px;
-}
-
-h1 a:link {
-	color: white;
-	font-size: 24pt;
-	text-decoration: none;
-	font-family: "MS Sans Serif", Geneva, sans-serif;
-}
-
-h1 a:visited {
-	color: white;
-}
-
-.firstletter {
-	font-size: 48pt;
-	color: #7CC0B0;
-	background-color: white;
-	padding: 0px 10px;
-	margin: 0px 10px;
-}
-
-#topbar {
-	margin-left: 25px;
-	margin-top: 5px;
-}
-
-
-#topbar {
-	list-style-type: none;
-}
-
-#topbar li {
-	padding-bottom: 30px;
-	padding-right: 5px;
-	color: black;
-	float: left;
-	list-style-type: none;
-}
-
-#topbar a:link {
-	color: white;
-	font-family: "Palatino Linotype", Palatino, serif;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-#topbar a:visited {
-	color: white;
-}
-
-#topbar a:hover {
-	color: #D0D0D0;
-	text-decoration: underline;
-}
-
-h2 {
-	color: #383838;	
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
-	color: #404040;
-	font-size: 12pt;
-	font-family: Helvetica, Arial, sans-serif;
-	background-color: #7CC0B0;
+	background-color: #e8e8e8;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 14px;
+	padding-top: 40px;
 }
 
-#mainbody {
-	outline: 3px dotted #D0D0D0;
-	padding: 50px 100px;
+body > header {
+	max-width: 650px;
+	margin: 0 auto;
+	padding-left: 35px;
+}
+
+body > header > h1 {
+	font-size: 24px;
+	line-height: normal;
+	margin: 30px 0 15px;
+}
+
+body > section {
+	max-width: 650px;
+	margin: 0 auto;
 	background-color: white;
-	margin: 200px 200px;
-	text-align: left;
-	max-width: 50%;
+	padding: 25px;
 }
 
-#mainbody a:link {
-	color: #7CC0B0;
-	font-weight: bold;
+body > section#main {
+	border: 2px solid #e8e8e8;
+	border-radius: 12px;
+}
+
+
+.block-section {
+	display: inline-block;
+	width: 49%;
+	height: 100%;
+	vertical-align: top;
+}
+
+.block-section#intro {
+	padding: 10px;
+}
+
+.block-section p {
+	font-size: 14px;
+	line-height: normal;
+}
+
+.block-section > .links {
+	margin-top: 30px;
+}
+
+.block-section a {
+	font-size: 14px;
+	line-height: normal;
+	color: #BE5D49;
 	text-decoration: none;
 }
 
-#mainbody a:visited {
-	color: #7CC0B0;
-}
-
-#mainbody a:hover {
-	color: #D0D0D0;
-	text-decoration: underline;
-}
-
-#contact {
-	font-style: italic;
-	font-family: Georgia, serif;
-	color: gray;
+footer {
 	text-align: center;
-}
-
-#newsitem {
-	list-style-type: circle;
-	margin-left: 20px;
-} 
-
-h3 {
-	font-size: 12pt;
-	padding-bottom: 0px;
-	color: #44A08A;
-	font-weight: bold;
-	font-family: Helvetica, Arial, sans-serif;
-}
-
-#footer {
-	font-size: 10pt;
-	text-align: center;
-	color: #D0D0D0;
 	margin-top: 20px;
 }
-	
-
