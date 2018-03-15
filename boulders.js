@@ -12,6 +12,7 @@ var CURRSCORE = 0;
 var HIGH = 0;
 var BEATN = false;
 var BEATG = false; 
+var LEVEL = 1;
 
 window.onload = function() {
 	if ($("best")) {
@@ -270,6 +271,8 @@ function newRound() {
 	var boulders = $$('.boulder');
 	boulders.invoke('remove');
 	createBoulders();
+	LEVEL++;
+	$("level").innerHTML = LEVEL;
 }
 
 // called when the Ajax fails
