@@ -1,0 +1,77 @@
+/*
+Natalie Wittenbrook
+This is my style sheet file for boulders.html
+*/
+
+body {
+	font-family: monospace;
+	font-size: 16px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.intro {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.level {
+	margin-top: 2em;
+}
+
+#boulderarea {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	width: 560px;
+	height: 360px;
+	position: relative;
+}
+
+.boulder {
+	width: 40px;
+	height: 30px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0);
+}
+
+.boulder:hover {
+	cursor: pointer;
+}
+
+.faded {
+	opacity: 0.5;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2em;
+	margin-bottom: 1em;
+	width: 30%;
+}
+
+#treasure {
+	position: absolute;
+	width: 100px;
+	height: 64px;
+	left: 41%;
+	top: 70%;
+}
+
+#chestclick {
+	position: absolute;
+	left: 28%;
+	top: 50%;
+}
+
+.treasureFade {
+	opacity: 0.75;
+}
+
+#restart {
+	margin-right: 30px;
+}
+
+	
